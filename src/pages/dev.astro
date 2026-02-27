@@ -1,0 +1,97 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+// Image from fetch
+const heroImage = "https://images.unsplash.com/photo-1761818645943-a3689c34ca03?auto=format&w=1920&q=80";
+const heroSrcset = "https://images.unsplash.com/photo-1761818645943-a3689c34ca03?auto=format&w=320&q=80 320w, https://images.unsplash.com/photo-1761818645943-a3689c34ca03?auto=format&w=768&q=80 768w, https://images.unsplash.com/photo-1761818645943-a3689c34ca03?auto=format&w=1280&q=80 1280w, https://images.unsplash.com/photo-1761818645943-a3689c34ca03?auto=format&w=1920&q=80 1920w";
+
+const capabilities = [
+  {
+    title: 'Transform concepts into functional, enduring solutions',
+    desc: 'From initial architecture to full-stack execution.'
+  },
+  {
+    title: 'Scale products that align with goals',
+    desc: 'Infrastructure built to handle growth and complexity.'
+  },
+  {
+    title: 'Deliver results with discretion and focus',
+    desc: 'A silent partner behind some of the industry\'s biggest moves.'
+  }
+];
+---
+
+<BaseLayout title="ParOne Dev | Your Vision, Realized">
+  <!-- Hero Section -->
+  <section class="relative pt-[calc(var(--nav-height)+4rem)] pb-32 border-b border-white/5 bg-[#0f172a]" data-ps="src/pages/dev.astro:q35dov">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-ps="src/pages/dev.astro:rkha1i">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center" data-ps="src/pages/dev.astro:rkha1h">
+        <div class="hero-animate" data-ps="src/pages/dev.astro:rkha1g">
+          <p class="text-sm font-medium tracking-widest text-blue-400 uppercase mb-4" data-ps="src/pages/dev.astro:655om">ParOne Dev</p>
+          <h1 class="text-5xl md:text-6xl font-light text-white mb-6" data-ps="src/pages/dev.astro:bj4ot8">Your Vision, <span class="font-medium text-blue-500" data-ps="src/pages/dev.astro:bjplen">Realized.</span></h1>
+          <p class="text-xl text-[var(--text-muted)] mb-10 max-w-lg hero-animate-delay-1" data-ps="src/pages/dev.astro:655on">
+            We transform ambitious ideas into solutions that make an impact.
+          </p>
+          <a href="/contact" class="inline-flex items-center gap-2 px-8 py-4 bg-white text-black font-medium rounded-full hover:bg-gray-200 transition-all hover-scale hero-animate-delay-2" data-ps="src/pages/dev.astro:7a32ed">
+            Start the Conversation
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+        <div class="relative h-96 lg:h-[600px] rounded-3xl overflow-hidden reveal-right border border-[var(--border)]" data-ps="src/pages/dev.astro:5gznok">
+          <div class="absolute inset-0 bg-gradient-to-tr from-[var(--background)]/80 to-transparent z-10" data-ps="src/pages/dev.astro:5gznoj"></div>
+          <img 
+            crossorigin="anonymous"
+            src={heroImage}
+            srcset={heroSrcset}
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            alt="Modern tech workspace"
+            class="w-full h-full object-cover grayscale-[20%]"
+            loading="eager" data-ps="src/pages/dev.astro:u2qed3" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What We Do -->
+  <section class="py-32 bg-[#1e293b] border-b border-white/5" data-ps="src/pages/dev.astro:q35dow">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-ps="src/pages/dev.astro:5gznoi">
+      <div class="max-w-3xl mb-20 reveal" data-ps="src/pages/dev.astro:5gznoh">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6" data-ps="src/pages/dev.astro:35a8ez">What We Do</h2>
+        <p class="text-lg text-slate-400" data-ps="src/pages/dev.astro:655oo">Engineering focused on precision and long-term viability.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12" data-ps="src/pages/dev.astro:5gznog">
+        {capabilities.map((cap, idx) => (
+          <div class={`reveal reveal-delay-${idx + 1} p-8 rounded-2xl bg-[#0f172a] border border-white/5 hover:border-blue-500/30 transition-all`} data-ps="src/pages/dev.astro:5gznof">
+            <div class="w-12 h-12 bg-blue-500/10 rounded-full flex items-center justify-center mb-6 text-blue-400" data-ps="src/pages/dev.astro:5gznoe">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
+            </div>
+            <h3 class="text-xl font-medium text-white mb-4" data-ps="src/pages/dev.astro:htp5mk">{cap.title}</h3>
+            <p class="text-[var(--text-muted)] leading-relaxed" data-ps="src/pages/dev.astro:655op">{cap.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Approach -->
+  <section class="relative py-40 overflow-hidden bg-[#0f172a] flex items-center justify-center text-center border-t border-white/5" data-ps="src/pages/dev.astro:q35dox">
+    <div class="absolute inset-0 z-0" data-ps="src/pages/dev.astro:5gznod">
+      <img 
+        crossorigin="anonymous"
+        src="https://images.unsplash.com/photo-1660854088062-c178a98550cd?auto=format&w=1920&q=80"
+        alt="Team collaboration"
+        class="w-full h-full object-cover opacity-10 mix-blend-luminosity"
+        loading="lazy" data-ps="src/pages/dev.astro:u2qed2" />
+      <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/80 to-transparent" data-ps="src/pages/dev.astro:5gznoc"></div>
+    </div>
+    
+    <div class="relative z-10 max-w-4xl mx-auto px-4 reveal-scale" data-ps="src/pages/dev.astro:5gznob">
+      <h2 class="text-4xl md:text-6xl font-bold text-white leading-tight mb-8" data-ps="src/pages/dev.astro:35a8ed">Every project is guided by strategic insight and thoughtful execution.</h2>
+      <a href="/contact" class="inline-flex items-center gap-2 text-blue-400 hover:text-white transition-colors text-lg uppercase tracking-widest font-bold" data-ps="src/pages/dev.astro:7a32ee">
+        Discuss Your Project
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

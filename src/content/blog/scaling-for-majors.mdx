@@ -1,0 +1,25 @@
+---
+title: 'Scaling for Majors: Handling Tournament Spikes'
+description: 'Architecting for extreme traffic volatility during golf major championships.'
+pubDate: 2024-04-12
+author: 'Infrastructure Team'
+category: 'Scalability'
+image: 'https://images.unsplash.com/photo-1649235311924-2dabc032db8d?auto=format&w=1200&q=80'
+tags:
+  - 'cloud'
+  - 'cdn'
+  - 'performance'
+draft: false
+---
+
+Major championships present a unique traffic profile: 99% idle followed by massive, instantaneous spikes when a leader reaches the final holes.
+
+## Infrastructure Strategy
+
+To handle this, we implemented a "warm-standby" architecture across multiple cloud providers. Our load balancers are tuned for rapid horizontal scaling, spinning up new instances in response to telemetry indicators before the traffic actually hits our edge.
+
+## Key Metrics
+
+- **Uptime:** 99.999% during the entire tournament window.
+- **Throughput:** Peak of 1.2TB/s during the Sunday afternoon window.
+- **Latency:** Global average of 14ms.

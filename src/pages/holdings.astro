@@ -1,0 +1,95 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+// Image from fetch
+const heroImage = "https://images.unsplash.com/photo-1768396747921-5a18367415d2?auto=format&w=1200&q=80";
+const heroSrcset = "https://images.unsplash.com/photo-1768396747921-5a18367415d2?auto=format&w=320&q=80 320w, https://images.unsplash.com/photo-1768396747921-5a18367415d2?auto=format&w=480&q=80 480w, https://images.unsplash.com/photo-1768396747921-5a18367415d2?auto=format&w=640&q=80 640w, https://images.unsplash.com/photo-1768396747921-5a18367415d2?auto=format&w=768&q=80 768w, https://images.unsplash.com/photo-1768396747921-5a18367415d2?auto=format&w=1024&q=80 1024w, https://images.unsplash.com/photo-1768396747921-5a18367415d2?auto=format&w=1280&q=80 1280w, https://images.unsplash.com/photo-1768396747921-5a18367415d2?auto=format&w=1920&q=80 1920w";
+
+const philosophy = [
+  {
+    title: 'Focused opportunities with high potential',
+    icon: 'M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6'
+  },
+  {
+    title: 'Partnerships built on trust and clarity',
+    icon: 'M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2 M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75 M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z'
+  },
+  {
+    title: 'Strategic growth, executed with precision',
+    icon: 'm3 21 9-9 4 4L21 3 M21 3v6 M21 3h-6'
+  }
+];
+---
+
+<BaseLayout title="ParOne Holdings | Selective Ventures. Measurable Impact.">
+  <!-- Hero Section -->
+  <section class="relative pt-[calc(var(--nav-height)+4rem)] pb-32 border-b border-[var(--border)] bg-[var(--surface)] overflow-hidden" data-ps="src/pages/holdings.astro:ni53rn">
+    <div class="absolute inset-0 z-0" data-ps="src/pages/holdings.astro:jy7uqa">
+      <img 
+        crossorigin="anonymous"
+        src={heroImage}
+        srcset={heroSrcset}
+        sizes="100vw"
+        alt="Lush green golf course aerial view"
+        class="w-full h-full object-cover opacity-40 mix-blend-soft-light"
+        loading="eager" data-ps="src/pages/holdings.astro:mggz1u" />
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-950/40 via-slate-900/80 to-[var(--surface)] z-10" data-ps="src/pages/holdings.astro:jy7uq9"></div>
+    </div>
+    <div class="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-ps="src/pages/holdings.astro:jy7uq8">
+      <div class="hero-animate" data-ps="src/pages/holdings.astro:jy7uq7">
+        <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 max-w-4xl mx-auto leading-tight tracking-tight" data-ps="src/pages/holdings.astro:m3adbo">
+          Selective Ventures. <br/><span class="text-sky-400" data-ps="src/pages/holdings.astro:gmpqqu">Tangible Impact.</span>
+        </h1>
+        <p class="text-xl text-slate-400 mb-10 max-w-2xl mx-auto hero-animate-delay-1 leading-relaxed" data-ps="src/pages/holdings.astro:z9oiwi">
+          We invest in and operate businesses built to succeed. Strategic, hands-on, and ready to make things happen.
+        </p>
+        <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-sky-500 to-blue-600 text-white font-bold uppercase tracking-wider hover:shadow-[0_0_20px_rgba(14,165,233,0.3)] transition-all hover:scale-105 rounded-full" data-ps="src/pages/holdings.astro:s5qm6r">
+        <span data-ps="src/pages/holdings.astro:1r69ng">Connect With Our Team</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Philosophy -->
+  <section class="py-32 bg-slate-900 border-t border-white/5" data-ps="src/pages/holdings.astro:ni53ro">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-ps="src/pages/holdings.astro:jy7uq6">
+      <div class="text-center mb-20 reveal" data-ps="src/pages/holdings.astro:jy7uq5">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4" data-ps="src/pages/holdings.astro:y9erfu">Smart, Focused, Effective</h2>
+        <p class="text-slate-400" data-ps="src/pages/holdings.astro:h6xxkw">Our approach to business is simple.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-ps="src/pages/holdings.astro:hoqcae">
+        {philosophy.map((item, idx) => (
+          <div class={`p-8 bg-slate-800 border border-white/5 hover:border-sky-500/30 transition-all reveal reveal-delay-${idx + 1} rounded-xl`} data-ps="src/pages/holdings.astro:hoqcaf">
+            <div class="w-12 h-12 bg-sky-500/10 flex items-center justify-center mb-6 text-sky-400 rounded-lg" data-ps="src/pages/holdings.astro:hoqcag">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-white">
+                <path d={item.icon}/>
+              </svg>
+            </div>
+            <h3 class="text-xl font-medium text-white max-w-xs mx-auto" data-ps="src/pages/holdings.astro:jkzu89">{item.title}</h3>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section id="contact" class="relative py-48 bg-black overflow-hidden group" data-ps="src/pages/holdings.astro:ni53rp">
+    <div class="absolute inset-0 z-0 overflow-hidden" data-ps="src/pages/holdings.astro:bg-container">
+      <img 
+        src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?auto=format&w=1920&q=80" 
+        alt="Golf Course Background" 
+        class="w-full h-full object-cover opacity-30 mix-blend-luminosity scale-110 group-hover:scale-100 transition-transform duration-[10s] ease-out"
+        data-ps="src/pages/holdings.astro:bg-img"
+      />
+      <div class="absolute inset-0 bg-gradient-to-b from-black via-black/40 to-black z-10" data-ps="src/pages/holdings.astro:bg-overlay"></div>
+    </div>
+
+    <div class="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center reveal" data-ps="src/pages/holdings.astro:hoqcah">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-10 leading-tight" data-ps="src/pages/holdings.astro:y9erfv">Looking for a partner who gets things done? Let’s talk.</h2>
+      <a href="/contact" class="inline-flex items-center justify-center px-12 py-5 bg-white text-black font-bold uppercase tracking-wider hover:bg-sky-500 hover:text-white transition-all hover:scale-105 rounded-full shadow-2xl" data-ps="src/pages/holdings.astro:hf75ln">
+        <span data-ps="src/pages/holdings.astro:1r69nf">Get In Touch</span>
+      </a>
+    </div>
+  </section>
+</BaseLayout>

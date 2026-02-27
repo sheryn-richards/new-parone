@@ -1,0 +1,40 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import PressCards from '@/components/PressCards.astro';
+---
+
+<BaseLayout title="Press | ParOne">
+  <!-- Hero Section -->
+  <section class="pt-[calc(var(--nav-height)+8rem)] pb-32 relative overflow-hidden bg-[#0f172a]" data-ps="src/pages/press.astro:m3wsxr">
+    <div class="absolute inset-0" data-ps="src/pages/press.astro:bg-img">
+      <img src="https://images.unsplash.com/photo-1650984661525-7e6b1b874e47?auto=format&w=1920&q=80" alt="News room" class="w-full h-full object-cover opacity-30 mix-blend-screen" data-ps="src/pages/press.astro:nekfce" />
+      <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/80 to-[#0f172a]/40" data-ps="src/pages/press.astro:6gojav"></div>
+    </div>
+    <div class="max-w-7xl mx-auto px-6 relative z-10 text-center" data-ps="src/pages/press.astro:6gojam">
+      <h1 class="text-5xl md:text-7xl font-bold text-white mb-6" data-ps="src/pages/press.astro:gjwuk">Press Releases</h1>
+      <p class="text-xl text-slate-400 max-w-3xl mx-auto mb-12" data-ps="src/pages/press.astro:cha70o">
+        Latest news and updates from ParOne and our partners.
+      </p>
+    </div>
+  </section>
+
+  <!-- News Grid -->
+  <section class="py-24 bg-slate-900 border-t border-white/5" data-ps="src/pages/press.astro:m3wsxs">
+    <div class="max-w-7xl mx-auto px-6" data-ps="src/pages/press.astro:6gojan">
+      <PressCards />
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-24 bg-gradient-to-br from-blue-900/20 to-purple-900/20 border-t border-white/10" data-ps="src/pages/press.astro:m3wsxt">
+    <div class="max-w-4xl mx-auto px-6 text-center" data-ps="src/pages/press.astro:6gojav">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-8" data-ps="src/pages/press.astro:e7v0d1">Media Inquiries</h2>
+      <p class="text-slate-400 text-lg mb-12 max-w-2xl mx-auto" data-ps="src/pages/press.astro:cha701">
+        For press kits, interview requests, or additional information about ParOne.
+      </p>
+      <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 text-base font-bold text-white bg-blue-600 hover:bg-blue-500 rounded-full transition-all hover:scale-105 shadow-lg shadow-blue-500/25" data-ps="src/pages/press.astro:5dcaay">
+        Contact Press Team
+      </a>
+    </div>
+  </section>
+</BaseLayout>

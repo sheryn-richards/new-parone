@@ -1,0 +1,145 @@
+---
+import { SITE } from '@/config/site';
+
+const mainLinks = [
+  { name: 'ParOne Dev', href: '/parone-dev' },
+  { name: 'ParOne Holdings', href: '/holdings' },
+  { name: 'AVA Golf', href: '/ava-golf' },
+  { name: 'GolfCentral.tv', href: '/golfcentral-tv' },
+  { name: 'App', href: '/app' },
+];
+
+const utilityLinks = [
+  { name: 'Team', href: '/team' },
+  { name: 'Press', href: '/press' },
+  { name: 'Contact', href: '/contact' },
+];
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 bg-white/5 backdrop-blur-md transition-all duration-300 border-b border-white/10" id="main-nav" data-ps="src/components/Navigation.astro:dt8k84">
+  <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8" data-ps="src/components/Navigation.astro:gqvsd9">
+    <div class="flex items-center justify-between h-20" data-ps="src/components/Navigation.astro:gqvsda">
+      
+      <!-- Logo -->
+      <a href="/" class="flex-shrink-0 flex items-center gap-2 group" data-ps="src/components/Navigation.astro:7vkjsd">
+        <img src="https://cdn.pagesmith.app/f0c80795/images/parone-HD-1536-1536.webp" alt="ParOne" class="h-8 w-auto opacity-90 group-hover:opacity-100 transition-opacity" data-ps="src/components/Navigation.astro:d4d6a1" />
+      </a>
+
+      <!-- Desktop Navigation -->
+      <div class="hidden lg:flex items-center gap-12" data-ps="src/components/Navigation.astro:gqvsd9">
+        <nav class="flex items-center gap-8" data-ps="src/components/Navigation.astro:m59h3d">
+          {mainLinks.map(link => (
+            <a
+              href={link.href}
+              class="text-sm font-medium text-slate-300 hover:text-[#00ff9d] transition-colors tracking-wide uppercase text-[11px]"
+             data-ps="src/components/Navigation.astro:7vkjsa">
+              {link.name}
+            </a>
+          ))}
+        </nav>
+
+        <div class="w-px h-6 bg-white/10" data-ps="src/components/Navigation.astro:gqvsda"></div>
+
+        <nav class="flex items-center gap-6" data-ps="src/components/Navigation.astro:m59h3c">
+          {utilityLinks.map(link => (
+            <a
+              href={link.href}
+              class="text-xs font-medium text-slate-400 hover:text-white transition-colors"
+             data-ps="src/components/Navigation.astro:7vkjse">
+              {link.name}
+            </a>
+          ))}
+        </nav>
+      </div>
+
+      <!-- CTA & Mobile Toggle -->
+      <div class="flex items-center gap-4" data-ps="src/components/Navigation.astro:gqvsdc">
+        <a 
+          href="/video" 
+          class="hidden md:inline-flex items-center justify-center px-6 py-2 text-[10px] font-bold uppercase tracking-widest text-white bg-gradient-to-r from-sky-500 to-blue-600 hover:shadow-[0_0_20px_rgba(14,165,233,0.3)] transition-all hover:scale-105 rounded-full"
+         data-ps="src/components/Navigation.astro:7vkjsb">
+          <span class="" data-ps="src/components/Navigation.astro:i2om6a">Login</span>
+        </a>
+
+        <!-- Mobile menu button -->
+        <button
+          type="button"
+          class="md:hidden inline-flex items-center justify-center p-2 rounded-md text-[var(--text-muted)] hover:text-white hover:bg-[var(--surface)] transition-colors focus:outline-none"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+          id="mobile-menu-button"
+         data-ps="src/components/Navigation.astro:4mva8">
+          <span class="sr-only" data-ps="src/components/Navigation.astro:i2om69">Open main menu</span>
+          <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile menu -->
+  <div class="lg:hidden hidden bg-[#0f172a] border-b border-white/10 absolute top-20 left-0 w-full" id="mobile-menu" data-ps="src/components/Navigation.astro:gqvsdd">
+    <div class="px-4 pt-4 pb-6 space-y-2" data-ps="src/components/Navigation.astro:gqvsde">
+      <div class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2 mt-2" data-ps="src/components/Navigation.astro:gqvsdb">Services</div>
+      {mainLinks.map(link => (
+        <a
+          href={link.href}
+          class="block px-3 py-3 rounded text-sm font-medium text-slate-300 hover:text-blue-400 hover:bg-white/5 transition-colors border-l-2 border-transparent hover:border-blue-500"
+         data-ps="src/components/Navigation.astro:7vkjsd">
+          {link.name}
+        </a>
+      ))}
+      
+      <div class="h-px bg-white/10 my-4" data-ps="src/components/Navigation.astro:gqvsdc"></div>
+      
+      <div class="text-xs font-bold text-slate-500 uppercase tracking-widest mb-2" data-ps="src/components/Navigation.astro:gqvsdd">Company</div>
+      {utilityLinks.map(link => (
+        <a
+          href={link.href}
+          class="block px-3 py-2 rounded text-sm font-medium text-slate-400 hover:text-white hover:bg-white/5 transition-colors"
+         data-ps="src/components/Navigation.astro:7vkjsf">
+          {link.name}
+        </a>
+      ))}
+      
+      <div class="pt-4 mt-4" data-ps="src/components/Navigation.astro:gqvsde">
+        <a href="/video" class="block w-full text-center px-4 py-3 text-xs font-bold uppercase tracking-wider text-white bg-blue-600 hover:bg-[#00ff9d] hover:text-slate-900 transition-colors rounded-full" data-ps="src/components/Navigation.astro:kd8n5z">
+          Client Login
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<script>
+  // Mobile menu toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+
+  if (mobileMenuButton && mobileMenu) {
+    mobileMenuButton.addEventListener('click', () => {
+      const isExpanded = mobileMenuButton.getAttribute('aria-expanded') === 'true';
+      mobileMenuButton.setAttribute('aria-expanded', (!isExpanded).toString());
+      mobileMenu.classList.toggle('hidden');
+    });
+  }
+
+  // Sticky nav behavior
+  const nav = document.getElementById('main-nav');
+  if (nav) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        nav.classList.add('shadow-xl');
+        nav.classList.add('bg-[#0f172a]'); // Solid blue on scroll
+        nav.classList.remove('bg-white/5');
+        nav.classList.remove('backdrop-blur-md');
+      } else {
+        nav.classList.remove('shadow-xl');
+        nav.classList.remove('bg-[#0f172a]');
+        nav.classList.add('bg-white/5');
+        nav.classList.add('backdrop-blur-md');
+      }
+    });
+  }
+</script>

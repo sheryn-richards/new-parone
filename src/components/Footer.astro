@@ -1,0 +1,66 @@
+---
+import { SITE } from '../config/site';
+
+export interface Props {
+  companyName?: string;
+  companyDescription?: string;
+  copyright?: string;
+}
+
+const {
+  companyName = SITE.name,
+  companyDescription = SITE.description,
+  copyright = `2026 ${companyName}, Inc.`
+} = Astro.props;
+---
+
+<footer class="bg-[#0f172a] text-white py-12 border-t border-white/10" data-ps="src/components/Footer.astro:v4u178">
+  <div class="max-w-7xl mx-auto px-6" data-ps="src/components/Footer.astro:v4u179">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12" data-ps="src/components/Footer.astro:v4u180">
+      <div class="md:col-span-1" data-ps="src/components/Footer.astro:v4u181">
+        <div class="mb-4" data-ps="src/components/Footer.astro:p4vf8b">
+          <img src="https://cdn.pagesmith.app/f0c80795/images/parone-HD-1536-1536.webp" alt="ParOne Logo" class="h-8 w-auto" data-ps="src/components/Footer.astro:4qdjey" />
+        </div>
+        <div class="flex gap-4 mt-4" data-ps="src/components/Footer.astro:v4u184">
+          <a href={SITE.socials.linkedin} class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center border border-white/10 hover:border-blue-500 transition-colors text-slate-400 hover:text-blue-400" aria-label="LinkedIn" data-ps="src/components/Footer.astro:v4u185">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div data-ps="src/components/Footer.astro:v4u187">
+        <h3 class="text-white font-bold mb-6 uppercase tracking-widest text-sm" data-ps="src/components/Footer.astro:v4u188">Company</h3>
+        <ul class="flex flex-col gap-4" data-ps="src/components/Footer.astro:v4u189">
+          <li data-ps="src/components/Footer.astro:v4u190"><a href="/" class="text-slate-400 hover:text-[#00ff9d] transition-colors" data-ps="src/components/Footer.astro:v4u191">Home</a></li>
+          <li data-ps="src/components/Footer.astro:v4u192"><a href="/team" class="text-slate-400 hover:text-[#00ff9d] transition-colors" data-ps="src/components/Footer.astro:v4u193">Team</a></li>
+          <li data-ps="src/components/Footer.astro:v4u194"><a href="/press/" class="text-slate-400 hover:text-[#00ff9d] transition-colors" data-ps="src/components/Footer.astro:v4u195">Press</a></li>
+          <li data-ps="src/components/Footer.astro:v4u196"><a href="/contact" class="text-slate-400 hover:text-[#00ff9d] transition-colors" data-ps="src/components/Footer.astro:v4u197">Contact</a></li>
+        </ul>
+      </div>
+
+      <div data-ps="src/components/Footer.astro:v4u198">
+        <h3 class="text-white font-bold mb-6 uppercase tracking-widest text-sm" data-ps="src/components/Footer.astro:v4u199">What We Build</h3>
+        <ul class="flex flex-col gap-4" data-ps="src/components/Footer.astro:v4u200">
+          <li data-ps="src/components/Footer.astro:v4u201"><a href="/parone-dev" class="text-slate-400 hover:text-[#00ff9d] transition-colors" data-ps="src/components/Footer.astro:v4u202">ParOne Dev</a></li>
+          <li data-ps="src/components/Footer.astro:v4u203"><a href="/holdings" class="text-slate-400 hover:text-[#00ff9d] transition-colors" data-ps="src/components/Footer.astro:v4u202">ParOne Holdings</a></li>
+          <li data-ps="src/components/Footer.astro:v4u203"><a href="/ava-golf" class="text-slate-400 hover:text-[#00ff9d] transition-colors" data-ps="src/components/Footer.astro:v4u204">AVA Golf</a></li>
+          <li data-ps="src/components/Footer.astro:v4u205"><a href="/golfcentral-tv" class="text-slate-400 hover:text-[#00ff9d] transition-colors" data-ps="src/components/Footer.astro:v4u206">GolfCentral.tv</a></li>
+        </ul>
+      </div>
+
+      <div class="col-span-1" data-ps="src/components/Footer.astro:p4vf8b">
+        <h3 class="text-white font-bold mb-6 uppercase tracking-widest text-sm" data-ps="src/components/Footer.astro:fh1w66">Resources</h3>
+        <ul class="flex flex-col gap-4">
+          <li data-ps="src/components/Footer.astro:sq28di"><a href="/blog" class="text-slate-400 hover:text-[#00ff9d] transition-colors" data-ps="src/components/Footer.astro:8o2pi">Case Studies</a></li>
+          <li data-ps="src/components/Footer.astro:sq28dh"><a href="https://docs.parone.com/" class="text-slate-400 hover:text-[#00ff9d] transition-colors" data-ps="src/components/Footer.astro:8o2pj">Technical Docs</a></li>
+          <li data-ps="src/components/Footer.astro:sq28dg"><a href="/privacy" class="text-slate-400 hover:text-[#00ff9d] transition-colors" data-ps="src/components/Footer.astro:8o2pk">Privacy Policy</a></li>
+          <li data-ps="src/components/Footer.astro:sq28df"><a href="/terms" class="text-slate-400 hover:text-[#00ff9d] transition-colors" data-ps="src/components/Footer.astro:8o2pl">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6" data-ps="src/components/Footer.astro:v4u207">
+      <p class="text-[11px] text-slate-500 font-medium tracking-wide" data-ps="src/components/Footer.astro:v4u208">© 2026 ParOne, Inc.</p>
+    </div>
+  </div>
+</footer>

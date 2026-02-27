@@ -1,0 +1,191 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+// Images
+const heroImage = "https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&w=1920&q=80";
+---
+
+<BaseLayout title="ParOne App | Interactive Video. Measurable Performance.">
+  <!-- Hero Section -->
+  <section class="relative min-h-[70vh] flex items-center pt-[var(--nav-height)] border-b border-white/5 overflow-hidden bg-[#0f172a]" data-ps="src/pages/app.astro:gcizhe">
+    <div class="absolute inset-0 z-0 opacity-40" data-ps="src/pages/app.astro:6u2f68">
+      <img src={heroImage} alt="Golf course" class="w-full h-full object-cover" data-ps="src/pages/app.astro:4btau1" />
+      <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/80 to-transparent" data-ps="src/pages/app.astro:6u2f69"></div>
+      <div class="absolute inset-0 bg-gradient-to-br from-sky-500/10 via-transparent to-blue-500/10" data-ps="src/pages/app.astro:fth3fr"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-6 relative z-10 w-full text-center py-20" data-ps="src/pages/app.astro:6u2f6a">
+      <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight leading-tight" data-ps="src/pages/app.astro:kd2bqk">
+        Interactive Video. <br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500" data-ps="src/pages/app.astro:qiv3wp">Measurable Performance.</span>
+      </h1>
+      <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-12" data-ps="src/pages/app.astro:5kpvld">
+        Built for teams that need more than standard video hosting.
+      </p>
+      
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-8 mb-12" data-ps="src/pages/app.astro:6u2f6c">
+        <div class="text-center" data-ps="src/pages/app.astro:6u2f6d">
+          <a href="/video" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-sky-500 to-blue-600 text-white font-bold uppercase tracking-wider rounded-full hover:shadow-[0_0_20px_rgba(14,165,233,0.3)] transition-all hover:scale-105 min-w-[160px]" data-ps="src/pages/app.astro:cons8r">
+            Sign In
+          </a>
+          <p class="text-xs text-slate-500 mt-2 uppercase tracking-wide" data-ps="src/pages/app.astro:5kpvle">Existing customers</p>
+        </div>
+        
+        <div class="text-center" data-ps="src/pages/app.astro:6u2f6e">
+          <a href="/contact" class="inline-flex items-center justify-center px-8 py-4 text-slate-300 hover:text-white font-medium transition-colors group" data-ps="src/pages/app.astro:cons8s">
+            Inquiries <span class="group-hover:translate-x-1 transition-transform ml-2" data-ps="src/pages/app.astro:qiv3w3">→</span>
+          </a>
+          <p class="text-xs text-slate-500 mt-2 uppercase tracking-wide" data-ps="src/pages/app.astro:5kpvlf">Questions about integrations</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Value Prop Section -->
+  <section class="py-24 bg-[#0f172a] border-b border-white/5" data-ps="src/pages/app.astro:gcizhd">
+    <div class="max-w-7xl mx-auto px-6" data-ps="src/pages/app.astro:6u2f6f">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center" data-ps="src/pages/app.astro:6u2f6g">
+        <div data-ps="src/pages/app.astro:6u2f6h">
+          <h2 class="text-3xl md:text-5xl font-bold text-white mb-8" data-ps="src/pages/app.astro:5oneix">Video That Works Harder</h2>
+          <div class="space-y-6 text-lg text-slate-400" data-ps="src/pages/app.astro:6u2f73">
+            <p data-ps="src/pages/app.astro:5kpvlg">
+              Most platforms like YouTube and Vimeo are built for distribution.
+              <strong class="text-white">ParOne is built for ownership.</strong>
+            </p>
+            <p data-ps="src/pages/app.astro:5kpvlh">
+              With ParOne’s media player, your video becomes a measurable, revenue-aware surface — connecting engagement, advertising, commerce, and user behavior in one system.
+            </p>
+            <div class="pl-6 border-l-2 border-blue-500 italic text-slate-300" data-ps="src/pages/app.astro:6u2f74">
+              Instead of asking “How many views did we get?”<br/>
+              You can ask: “What did this video actually drive?”
+            </div>
+          </div>
+        </div>
+        
+        <div class="grid grid-cols-1 gap-6" data-ps="src/pages/app.astro:6u2f75">
+          <div class="p-8 rounded-2xl bg-slate-800/50 border border-white/5 hover:border-blue-500/30 transition-all" data-ps="src/pages/app.astro:6u2f76">
+            <h3 class="text-xl font-bold text-white mb-3" data-ps="src/pages/app.astro:8zripg">Turn Video into Action</h3>
+            <p class="text-slate-400" data-ps="src/pages/app.astro:5kpvli">Embed sponsor links, product integrations, and contextual calls-to-action directly inside your player — without sending viewers away.</p>
+          </div>
+          <div class="p-8 rounded-2xl bg-slate-800/50 border border-white/5 hover:border-blue-500/30 transition-all" data-ps="src/pages/app.astro:6u2f77">
+            <h3 class="text-xl font-bold text-white mb-3" data-ps="src/pages/app.astro:8zripf">Understand Behavior, Not Just Views</h3>
+            <p class="text-slate-400" data-ps="src/pages/app.astro:5kpvlj">Track engagement across playback, overlays, advertising, and custom user IDs to see how content influences real outcomes.</p>
+          </div>
+          <div class="p-8 rounded-2xl bg-slate-800/50 border border-white/5 hover:border-blue-500/30 transition-all" data-ps="src/pages/app.astro:6u2f78">
+            <h3 class="text-xl font-bold text-white mb-3" data-ps="src/pages/app.astro:8zripe">Align Video to Business Metrics</h3>
+            <p class="text-slate-400" data-ps="src/pages/app.astro:5kpvlk">Define and measure the KPIs that matter to your organization — not just generic platform metrics.</p>
+          </div>
+          <div class="p-8 rounded-2xl bg-slate-800/50 border border-white/5 hover:border-blue-500/30 transition-all" data-ps="src/pages/app.astro:6u2f79">
+            <h3 class="text-xl font-bold text-white mb-3" data-ps="src/pages/app.astro:8zripd">Own Your Data Layer</h3>
+            <p class="text-slate-400" data-ps="src/pages/app.astro:5kpvll">Deliver analytics via API and integrate ParOne data into your broader reporting systems.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Metrics Grid -->
+  <section class="py-24 bg-[#1e293b] border-b border-white/5" data-ps="src/pages/app.astro:gcizhc">
+    <div class="max-w-7xl mx-auto px-6" data-ps="src/pages/app.astro:6u2f7a">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" data-ps="src/pages/app.astro:6u2f7b">
+        <div class="group" data-ps="src/pages/app.astro:6u2f7c">
+          <h3 class="text-sm font-bold text-blue-400 uppercase tracking-widest mb-4" data-ps="src/pages/app.astro:8zripc">Playback & Engagement</h3>
+          <ul class="space-y-2 text-slate-400 text-sm">
+            <li class="flex items-center gap-2" data-ps="src/pages/app.astro:dn4lwi"><span class="w-1.5 h-1.5 rounded-full bg-blue-500" data-ps="src/pages/app.astro:qiv3w2"></span>Impressions</li>
+            <li class="flex items-center gap-2" data-ps="src/pages/app.astro:dn4lwh"><span class="w-1.5 h-1.5 rounded-full bg-blue-500" data-ps="src/pages/app.astro:qiv3w1"></span>View thresholds</li>
+            <li class="flex items-center gap-2" data-ps="src/pages/app.astro:dn4lwg"><span class="w-1.5 h-1.5 rounded-full bg-blue-500" data-ps="src/pages/app.astro:qiv3w0"></span>Completion rates</li>
+            <li class="flex items-center gap-2" data-ps="src/pages/app.astro:6fmawf"><span class="w-1.5 h-1.5 rounded-full bg-blue-500" data-ps="src/pages/app.astro:qiv3vz"></span>Pauses</li>
+            <li class="flex items-center gap-2" data-ps="src/pages/app.astro:6fmawg"><span class="w-1.5 h-1.5 rounded-full bg-blue-500" data-ps="src/pages/app.astro:qiv3vy"></span>Fullscreen behavior</li>
+          </ul>
+        </div>
+        
+        <div class="group" data-ps="src/pages/app.astro:fth3g0">
+          <h3 class="text-sm font-bold text-teal-400 uppercase tracking-widest mb-4" data-ps="src/pages/app.astro:8zripb">Advertising Performance</h3>
+          <ul class="space-y-2 text-slate-400 text-sm">
+            <li class="flex items-center gap-2" data-ps="src/pages/app.astro:6fmawh"><span class="w-1.5 h-1.5 rounded-full bg-teal-500" data-ps="src/pages/app.astro:qiv3vx"></span>Ad impressions</li>
+            <li class="flex items-center gap-2" data-ps="src/pages/app.astro:6fmawi"><span class="w-1.5 h-1.5 rounded-full bg-teal-500" data-ps="src/pages/app.astro:qiv3vw"></span>Quartiles</li>
+            <li class="flex items-center gap-2" data-ps="src/pages/app.astro:6fmawj"><span class="w-1.5 h-1.5 rounded-full bg-teal-500" data-ps="src/pages/app.astro:qiv3vv"></span>Clicks</li>
+            <li class="flex items-center gap-2" data-ps="src/pages/app.astro:6fmawk"><span class="w-1.5 h-1.5 rounded-full bg-teal-500" data-ps="src/pages/app.astro:qiv3vu"></span>Skips</li>
+            <li class="flex items-center gap-2" data-ps="src/pages/app.astro:6fmawl"><span class="w-1.5 h-1.5 rounded-full bg-teal-500" data-ps="src/pages/app.astro:qiv3v8"></span>Autoplay performance</li>
+          </ul>
+        </div>
+        
+        <div class="group" data-ps="src/pages/app.astro:fth3fz">
+          <h3 class="text-sm font-bold text-sky-400 uppercase tracking-widest mb-4" data-ps="src/pages/app.astro:8zripa">Call-to-Action Performance</h3>
+          <ul class="space-y-2 text-slate-400 text-sm">
+            <li class="flex items-center gap-2" data-ps="src/pages/app.astro:6fmawm"><span class="w-1.5 h-1.5 rounded-full bg-sky-500" data-ps="src/pages/app.astro:qiv3v7"></span>Impressions</li>
+            <li class="flex items-center gap-2" data-ps="src/pages/app.astro:6fmawn"><span class="w-1.5 h-1.5 rounded-full bg-sky-500" data-ps="src/pages/app.astro:qiv3v6"></span>Clicks</li>
+            <li class="flex items-center gap-2" data-ps="src/pages/app.astro:6fmawo"><span class="w-1.5 h-1.5 rounded-full bg-sky-500" data-ps="src/pages/app.astro:qiv3v5"></span>Collapses</li>
+            <li class="flex items-center gap-2" data-ps="src/pages/app.astro:6fmaxa"><span class="w-1.5 h-1.5 rounded-full bg-sky-500" data-ps="src/pages/app.astro:qiv3v4"></span>Expansions</li>
+          </ul>
+        </div>
+        
+        <div class="group" data-ps="src/pages/app.astro:fth3fy">
+          <h3 class="text-sm font-bold text-emerald-400 uppercase tracking-widest mb-4" data-ps="src/pages/app.astro:8zrip9">Audience Insights</h3>
+          <ul class="space-y-2 text-slate-400 text-sm">
+            <li class="flex items-center gap-2" data-ps="src/pages/app.astro:6fmaxb"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500" data-ps="src/pages/app.astro:qiv3v3"></span>Watch time</li>
+            <li class="flex items-center gap-2" data-ps="src/pages/app.astro:6fmaxc"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500" data-ps="src/pages/app.astro:qiv3v2"></span>Engagement patterns</li>
+            <li class="flex items-center gap-2" data-ps="src/pages/app.astro:6fmaxd"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500" data-ps="src/pages/app.astro:qiv3v1"></span>Device data</li>
+            <li class="flex items-center gap-2" data-ps="src/pages/app.astro:6fmaxe"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500" data-ps="src/pages/app.astro:qiv3v0"></span>User-level tracking (UUID)</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="mt-12 text-center" data-ps="src/pages/app.astro:fth3fx">
+        <details class="group inline-block">
+          <summary class="list-none cursor-pointer text-xs font-bold uppercase tracking-widest text-slate-500 hover:text-white transition-colors flex items-center gap-2 justify-center">
+            <span data-ps="src/pages/app.astro:qiv3uz">View Full Metric List</span>
+            <svg class="w-4 h-4 transform group-open:rotate-180 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+          </summary>
+          <div class="mt-6 p-6 bg-slate-800/50 rounded-xl text-left text-sm text-slate-400 max-w-2xl mx-auto border border-white/5" data-ps="src/pages/app.astro:fth3fw">
+            <p data-ps="src/pages/app.astro:5kpvlm">ParOne captures over 50 unique data points per session, available via API or dashboard export. Contact sales for technical documentation.</p>
+          </div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live & Interactive -->
+  <section class="py-24 bg-[#0f172a] border-b border-white/5" data-ps="src/pages/app.astro:gcizhb">
+    <div class="max-w-7xl mx-auto px-6 text-center" data-ps="src/pages/app.astro:fth3fv">
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-6" data-ps="src/pages/app.astro:5oneiy">Live & Interactive Video</h2>
+      <p class="text-xl text-slate-400 max-w-2xl mx-auto mb-16" data-ps="src/pages/app.astro:5kpvm8">
+        ParOne extends the same performance-driven philosophy to livestreaming.
+      </p>
+      
+      <div class="grid grid-cols-2 md:grid-cols-5 gap-4" data-ps="src/pages/app.astro:fth3fu">
+        {[
+          'Interactive overlays',
+          'Sponsor integrations',
+          'Multistream viewing',
+          'Advanced monetization',
+          'Unified analytics'
+        ].map((item) => (
+          <div class="p-4 rounded-lg bg-slate-800/30 border border-white/5 text-sm font-bold text-slate-300 flex items-center justify-center text-center h-24 hover:bg-slate-800/50 hover:text-white transition-colors hover:border-blue-500/30" data-ps="src/pages/app.astro:fth3ft">
+            {item}
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Access -->
+  <section class="py-32 bg-gradient-to-br from-blue-900/20 to-slate-900/20" data-ps="src/pages/app.astro:gcizha">
+    <div class="max-w-3xl mx-auto px-6 text-center" data-ps="src/pages/app.astro:fth3fs">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-8" data-ps="src/pages/app.astro:5oneiz">Existing Customer?</h2>
+      <p class="text-slate-400 mb-10 text-lg" data-ps="src/pages/app.astro:5kpvm9">
+        Sign in to access your ParOne dashboard, analytics, and media management tools.
+      </p>
+      
+      <div class="flex flex-col items-center gap-6" data-ps="src/pages/app.astro:fth3fr">
+        <a href="/video" class="inline-flex items-center justify-center px-10 py-4 bg-blue-600 text-white font-bold rounded-full hover:bg-blue-500 transition-all hover:scale-105 shadow-lg shadow-blue-500/25" data-ps="src/pages/app.astro:cons8t">
+          Sign In
+        </a>
+        <a href="/contact" class="text-slate-500 text-sm hover:text-white transition-colors" data-ps="src/pages/app.astro:cons8u">
+          Need support? Contact our team.
+        </a>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

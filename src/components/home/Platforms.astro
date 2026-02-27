@@ -1,0 +1,98 @@
+---
+import { getCollection } from 'astro:content';
+
+const platforms = await getCollection('platforms');
+const sortedPlatforms = platforms.sort((a, b) => (a.data.order || 0) - (b.data.order || 0));
+---
+
+<section id="platforms" class="py-32 bg-slate-950 relative overflow-hidden" data-ps="src/components/home/Platforms.astro:8mt0fp">
+  <div class="absolute top-0 right-0 w-1/2 h-1/2 bg-blue-500/5 blur-[120px] rounded-full pointer-events-none" data-ps="src/components/home/Platforms.astro:rdh7vf"></div>
+  
+  <div class="max-w-7xl mx-auto px-6 relative z-10" data-ps="src/components/home/Platforms.astro:rdh7ve">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center" data-ps="src/components/home/Platforms.astro:rdh7vd">
+      <div data-ps="src/components/home/Platforms.astro:rdh7vc">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-8 tracking-tight reveal" data-ps="src/components/home/Platforms.astro:inonga">
+          Platform Engineering <span class="text-blue-400" data-ps="src/components/home/Platforms.astro:en0l5x">for Leaders.</span>
+        </h2>
+        <p class="text-xl text-slate-400 mb-12 leading-relaxed reveal reveal-delay-1" data-ps="src/components/home/Platforms.astro:fx42v2">
+          We operate as a high-end platform engineering partner, providing the technical depth required to build systems that scale, endure, and integrate seamlessly within the golf ecosystem.
+        </p>
+        
+        <div class="space-y-6 reveal reveal-delay-2" data-ps="src/components/home/Platforms.astro:rdh7vb">
+          {sortedPlatforms.map((platform) => (
+            <a href={platform.data.url || "#"} class="flex gap-4 group cursor-pointer" data-ps="src/components/home/Platforms.astro:rdh7va">
+              <div class="mt-1 w-6 h-6 rounded-full bg-blue-500/10 border border-blue-500/20 flex items-center justify-center flex-shrink-0 group-hover:bg-blue-500 group-hover:border-blue-500 transition-colors duration-300" data-ps="src/components/home/Platforms.astro:rdh7v9">
+                <div class="w-2 h-2 rounded-full bg-blue-500 group-hover:bg-white transition-colors duration-300" data-ps="src/components/home/Platforms.astro:v719x9"></div>
+              </div>
+              <div data-ps="src/components/home/Platforms.astro:v719xa">
+                <h3 class="text-white font-bold mb-1 group-hover:text-blue-400 transition-colors duration-300" data-ps="src/components/home/Platforms.astro:3z9q82">{platform.data.title}</h3>
+                <p class="text-slate-400 text-sm" data-ps="src/components/home/Platforms.astro:fx42v1">{platform.data.description}</p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+      
+      <div class="relative bg-slate-900/50 border border-slate-800 rounded-2xl p-8 md:p-12 reveal reveal-delay-3 shadow-2xl" data-ps="src/components/home/Platforms.astro:v719xb">
+        <h3 class="text-2xl font-bold text-white mb-8" data-ps="src/components/home/Platforms.astro:3z9q83">Why Leaders Choose Us</h3>
+        
+        <div class="space-y-8" data-ps="src/components/home/Platforms.astro:v719xc">
+          <div data-ps="src/components/home/Platforms.astro:v719xd">
+            <h4 class="text-sm font-semibold text-slate-400 uppercase tracking-widest mb-4" data-ps="src/components/home/Platforms.astro:ap56zj">Risk Reduction</h4>
+            <p class="text-slate-400 mb-6" data-ps="src/components/home/Platforms.astro:fx42v0">Traditional development often leads to fragmented results. We eliminate these core risks:</p>
+            <ul class="grid grid-cols-1 gap-4">
+              {[
+                "Communication friction between dev and product",
+                "Repeated rebuilds due to poor architecture",
+                "Systems that fail to scale with growth",
+                "Engineers without golf domain knowledge"
+              ].map(risk => (
+                <li class="flex items-center gap-3 text-slate-300 text-sm" data-ps="src/components/home/Platforms.astro:jenjxh">
+                  <svg class="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  {risk}
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+          <div class="p-6 bg-slate-950 rounded-xl border border-slate-800" data-ps="src/components/home/Platforms.astro:v719xe">
+            <p class="text-slate-400 italic text-sm" data-ps="src/components/home/Platforms.astro:fx42uz">"ParOne Dev operates inside the broader ParOne ecosystem, providing strategic perspective and domain insight beyond typical engineering partners."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="differentiation" class="py-32 bg-slate-950 border-t border-slate-900" data-ps="src/components/home/Platforms.astro:8mt0fo">
+  <div class="max-w-7xl mx-auto px-6" data-ps="src/components/home/Platforms.astro:v719xf">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12" data-ps="src/components/home/Platforms.astro:v719xg">
+      {[
+        { 
+          title: "Golf-native execution", 
+          desc: "Understanding launch monitors, simulators, player data, and course workflows from day one." 
+        },
+        { 
+          title: "Senior communication", 
+          desc: "Direct collaboration with experienced engineers and product thinkers. No account managers." 
+        },
+        { 
+          title: "Built to last", 
+          desc: "Architecture designed for durability, extensibility, and future-proof enterprise integrations." 
+        },
+        { 
+          title: "True partnership", 
+          desc: "We act as an extension of leadership teams, focused on outcomes rather than billing hours." 
+        }
+      ].map((item, i) => (
+        <div class="reveal" style={`transition-delay: ${i * 100}ms`} data-ps="src/components/home/Platforms.astro:v719xh">
+          <div class="text-blue-500 mb-6" data-ps="src/components/home/Platforms.astro:v719xi">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-4" data-ps="src/components/home/Platforms.astro:3z9q84">{item.title}</h3>
+          <p class="text-slate-400 leading-relaxed" data-ps="src/components/home/Platforms.astro:fx42uy">{item.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

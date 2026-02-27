@@ -1,0 +1,149 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+
+// Images
+const heroImage = "https://images.unsplash.com/photo-1726352165963-1322a6b23798?auto=format&w=1920&q=80";
+const heroSrcset = "https://images.unsplash.com/photo-1726352165963-1322a6b23798?auto=format&w=320&q=80 320w, https://images.unsplash.com/photo-1726352165963-1322a6b23798?auto=format&w=480&q=80 480w, https://images.unsplash.com/photo-1726352165963-1322a6b23798?auto=format&w=640&q=80 640w, https://images.unsplash.com/photo-1726352165963-1322a6b23798?auto=format&w=768&q=80 768w, https://images.unsplash.com/photo-1726352165963-1322a6b23798?auto=format&w=1024&q=80 1024w, https://images.unsplash.com/photo-1726352165963-1322a6b23798?auto=format&w=1280&q=80 1280w, https://images.unsplash.com/photo-1726352165963-1322a6b23798?auto=format&w=1920&q=80 1920w";
+
+const features = [
+  {
+    title: 'Personalized Game Insights',
+    desc: 'Understand your strengths, pinpoint your weaknesses, and improve faster.',
+    icon: 'Activity'
+  },
+  {
+    title: 'Data Meets Video',
+    desc: 'Get tailored video recommendations based on your unique swing and performance metrics.',
+    icon: 'Video'
+  },
+  {
+    title: 'Play Smarter, Not Harder',
+    desc: 'Actionable tips and drills so every practice session counts.',
+    icon: 'Brain'
+  }
+];
+---
+
+<BaseLayout title="AVA Golf | A Smarter Way to Improve Your Game">
+  <!-- Hero Section -->
+  <section class="relative min-h-[90vh] flex items-center justify-center pt-[var(--nav-height)] border-b border-white/5 overflow-hidden bg-[#0f172a]" data-ps="src/pages/ava-golf.astro:vt76h5">
+    <!-- Background Layers -->
+    <div class="absolute inset-0 z-0" data-ps="src/pages/ava-golf.astro:lyaxb0">
+      <div class="absolute inset-0 bg-[#0f172a]/40 z-10 mix-blend-overlay" data-ps="src/pages/ava-golf.astro:lyaxaz"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-[#0f172a]/20 to-transparent z-10" data-ps="src/pages/ava-golf.astro:9vfz0b"></div>
+      <div class="absolute inset-0 bg-gradient-to-br from-sky-500/10 via-transparent to-blue-500/10 z-10" data-ps="src/pages/ava-golf.astro:9vfz05"></div>
+      <img 
+        crossorigin="anonymous"
+        src={heroImage}
+        srcset={heroSrcset}
+        sizes="100vw"
+        alt="High tech golf simulator and analysis studio"
+        class="w-full h-full object-cover opacity-60"
+        loading="eager" 
+        fetchpriority="high"
+        data-ps="src/pages/ava-golf.astro:ogk1mk" />
+    </div>
+
+    <!-- Content -->
+    <div class="relative z-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-ps="src/pages/ava-golf.astro:lyaxay">
+      <div class="hero-animate" data-ps="src/pages/ava-golf.astro:lyaxax">
+        <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight" data-ps="src/pages/ava-golf.astro:4ik107">
+          AVA <span class="text-white" data-ps="src/pages/ava-golf.astro:77al69">Golf</span> — <span class="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-blue-500" data-ps="src/pages/ava-golf.astro:77al6a">Coming Soon</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-300 mb-10 font-light max-w-2xl mx-auto leading-relaxed" data-ps="src/pages/ava-golf.astro:3caqyr">
+          For golfers who demand precision and real results.
+        </p>
+        
+        <!-- Email Capture -->
+        <form class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto" onsubmit="event.preventDefault(); alert('Thanks for your interest!');">
+          <input 
+            type="email" 
+            placeholder="Enter your email" 
+            class="flex-1 bg-white/5 border border-white/10 px-6 py-4 rounded-full text-white placeholder:text-slate-500 focus:outline-none focus:border-blue-500 focus:bg-white/10 transition-all" 
+          />
+          <button 
+            type="submit" 
+            class="px-8 py-4 bg-gradient-to-r from-sky-500 to-blue-600 text-white font-medium rounded-full hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all hover:scale-105 uppercase tracking-wider font-bold" 
+            data-ps="src/pages/ava-golf.astro:so0jke">
+            Notify Me
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Features -->
+  <section class="py-32 bg-slate-900 border-t border-white/5" data-ps="src/pages/ava-golf.astro:vt76h6">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-ps="src/pages/ava-golf.astro:lyaxab">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-ps="src/pages/ava-golf.astro:lyaxaa">
+        {features.map((feature, idx) => (
+          <div class={`p-8 rounded-3xl bg-white/5 border border-white/5 hover:border-purple-500/30 hover:bg-white/10 transition-all duration-300 group reveal delay-${idx * 100}`} data-ps="src/pages/ava-golf.astro:9vfz07">
+            <div class="w-12 h-12 mb-6 rounded-2xl bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center text-blue-400 group-hover:text-purple-300 transition-colors" data-ps="src/pages/ava-golf.astro:9vfz0a">
+              {feature.icon === 'Activity' && <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>}
+              {feature.icon === 'Video' && <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>}
+              {feature.icon === 'Brain' && <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>}
+            </div>
+            <h3 class="text-xl font-bold text-white mb-3" data-ps="src/pages/ava-golf.astro:ou9tfk">{feature.title}</h3>
+            <p class="text-slate-400 leading-relaxed" data-ps="src/pages/ava-golf.astro:3caqyt">{feature.desc}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Secondary Section / Social Proof -->
+  <section class="py-24 bg-slate-950 border-y border-white/5 relative overflow-hidden" data-ps="src/pages/ava-golf.astro:5uiqp0">
+    <!-- Abstract Background -->
+    <div class="absolute inset-0 opacity-20 pointer-events-none" data-ps="src/pages/ava-golf.astro:9vfz09">
+      <div class="absolute top-0 left-0 w-96 h-96 bg-blue-500/20 rounded-full blur-[100px]" data-ps="src/pages/ava-golf.astro:9vfz08"></div>
+      <div class="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/20 rounded-full blur-[100px]" data-ps="src/pages/ava-golf.astro:9vfz07"></div>
+    </div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center" data-ps="src/pages/ava-golf.astro:9vfz06">
+      <div class="max-w-3xl mx-auto reveal" data-ps="src/pages/ava-golf.astro:9vfz05">
+        <h2 class="text-3xl md:text-5xl font-bold text-white mb-6" data-ps="src/pages/ava-golf.astro:6jns6i">Trusted by Golfers, Backed by Technology</h2>
+        <p class="text-xl text-slate-400 mb-12 font-light" data-ps="src/pages/ava-golf.astro:3car0j">
+          AVA Golf was built with precision, performance, and the golfer in mind.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final Launch Notification -->
+  <section class="py-32 bg-[#0f172a] relative overflow-hidden group" data-ps="src/pages/ava-golf.astro:vt76h7">
+    <!-- Background Layers -->
+    <div class="absolute inset-0 z-0" data-ps="src/pages/ava-golf.astro:9vfz06">
+      <div class="absolute inset-0 bg-[#0f172a]/60 z-10" data-ps="src/pages/ava-golf.astro:bg-overlay"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#0f172a] via-transparent to-transparent z-20" data-ps="src/pages/ava-golf.astro:bg-gradient"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(56,189,248,0.1),transparent_70%)] z-20 opacity-40" data-ps="src/pages/ava-golf.astro:bg-radial"></div>
+      <img 
+        crossorigin="anonymous"
+        src="https://images.unsplash.com/photo-1587174486073-ae5e5cff47ba?auto=format&w=1920&q=80" 
+        alt="Golf course background" 
+        class="w-full h-full object-cover opacity-60 mix-blend-screen transition-transform duration-[10000ms] ease-out group-hover:scale-110" 
+        loading="lazy"
+        data-ps="src/pages/ava-golf.astro:vaf4bp" />
+    </div>
+
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10" data-ps="src/pages/ava-golf.astro:9vfz09">
+      <div class="reveal" data-ps="src/pages/ava-golf.astro:9vfz05">
+        <h2 class="text-4xl md:text-6xl font-bold text-white mb-6" data-ps="src/pages/ava-golf.astro:6jns6j">Be the First to Know</h2>
+        <p class="text-xl text-slate-300 mb-10" data-ps="src/pages/ava-golf.astro:3car0k">Sign up to receive early access and updates when AVA Golf launches.</p>
+        
+        <form class="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto" onsubmit="event.preventDefault(); alert('Thanks for your interest!');">
+          <input 
+            type="email" 
+            placeholder="Enter your email" 
+            class="flex-1 bg-white/5 border border-white/10 px-6 py-4 rounded-full text-white placeholder:text-slate-500 focus:outline-none focus:border-purple-500 focus:bg-white/10 transition-all" 
+          />
+          <button 
+            type="submit" 
+            class="px-8 py-4 bg-white text-slate-900 font-bold rounded-full hover:bg-slate-200 transition-all hover:scale-105 shadow-[0_0_20px_rgba(255,255,255,0.2)]" 
+            data-ps="src/pages/ava-golf.astro:ag8noi">
+            Notify Me
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

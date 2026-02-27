@@ -1,0 +1,33 @@
+---
+title: 'Unlocked: The PGA Show - Building a Shoppable Streaming Series'
+description: 'How ParOne.dev built the infrastructure for the first-ever shoppable streaming experience at the PGA Show.'
+pubDate: 2024-03-20
+author: 'ParOne Engineering'
+category: 'Video Infrastructure'
+image: 'https://images.unsplash.com/photo-1766206096984-5b13b0f1eedd?auto=format&w=1200&q=80'
+tags:
+  - 'v-commerce'
+  - 'streaming'
+  - 'pga-show'
+draft: false
+---
+
+Unlocked: The PGA Show brought golf's biggest stage straight into living rooms, no badge required. For the first time ever, fans got all-access to the hottest gear fresh off the PGA Show floor.
+
+## The Technical Challenge
+
+Traditional streaming focuses on playback. V-Commerce requires a tight synchronization between the video buffer and product metadata. We needed to handle:
+
+1. **High Concurrency:** Over 30,000 golf industry professionals and thousands of viewers simultaneously.
+2. **Interactive Overlays:** Implementing the "BuyBar™" which allowed users to shop instantly in-video.
+3. **Low Latency:** Ensuring that when a host mentioned a product, the corresponding buy button appeared within milliseconds.
+
+## The Solution
+
+We deployed an edge-heavy infrastructure using custom workers to inject product metadata into the HLS manifests. This ensured that the product availability was always synchronized with the video frame, regardless of network conditions or buffering.
+
+## Results
+
+- **Scale:** Successfully handled traffic spikes during peak broadcast hours.
+- **Engagement:** High conversion rates through the integrated shoppable interface.
+- **Reach:** Global distribution with under 15ms latency across major markets.

@@ -1,0 +1,25 @@
+---
+title: 'Data Integration: Unifying SwingU Telemetry'
+description: 'How we unified fragmented shot data and telemetry into a high-performance analytics layer.'
+pubDate: 2024-05-05
+author: 'Data Engineering'
+category: 'Data Engineering'
+image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&w=1200&q=80'
+tags:
+  - 'data'
+  - 'telemetry'
+  - 'api'
+draft: false
+---
+
+Golf data is notoriously fragmented. Between launch monitors, GPS trackers, and official scoring, there is no single standard.
+
+## The Unification Layer
+
+We built a standardized ingestion pipeline that normalizes various telemetry formats into a unified JSON schema. This allowed SwingU to leverage real-time analytics for their user base without worrying about the underlying hardware differences.
+
+## Features
+
+- **Real-time processing:** Shot data available in < 50ms.
+- **Predictive modeling:** Providing flight path predictions based on initial telemetry.
+- **Global API:** Highly available endpoint for mobile and web consumers.
